@@ -2,6 +2,11 @@
   body, html{
   background-color:black;
   }
+  pre{
+    background-color:black;
+    color:white;
+  }
+    
 </style>
 <pre>
  ___            __                                                         

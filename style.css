@@ -11,7 +11,7 @@ body {
   margin:0;
   height: 100vh;
   font-family: 'Pacifico', Georgia, Times, 'Times New Roman', serif;
-  background-image: url("IMAGES/pattern2.jpg");
+  background-image: url("images/pattern2.jpg");
   background-size: var(--backgroundSize);
   color: var(--whiteish);
   display: grid;

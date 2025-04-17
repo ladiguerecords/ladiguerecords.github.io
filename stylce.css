@@ -1,0 +1,26 @@
+:root {
+  --blackish: #222;
+  --whiteish: #e5e5e5;
+  --red:  #ff5e56;
+  --yellow: #ffbd2e;
+  --green: #27c93f;
+  --backgroundSize: 300px;
+}
+body {
+  box-sizing: border-box;
+  margin:0;
+  height: 100vh;
+  font-family: 'Pacifico', Georgia, Times, 'Times New Roman', serif;
+  background-image: url(https://img.freepik.com/free-vector/seamless-pattern_1159-5086.jpg?size=626&ext=jpg);
+  background-size: var(--backgroundSize);
+  color: var(--whiteish);
+  display: grid;
+  place-items: center;
+  animation: movingBackground 10s linear infinite;
+}
+
+@keyframes movingBackground {
+  from { background-position: 0 0;}
+  to {background-position: var(--backgroundSize) var(--backgroundSize);}
+}
+

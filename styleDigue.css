@@ -1,0 +1,331 @@
+:root {
+  --greyblack: #000;
+  --mentos: #daeddd;
+  --violine: #7d7dff;
+  --black: #000;
+  --cookie: #7f724f;
+  --soblue: #c7faff;
+  --blanco: #fff;
+  --backgroundSize: 295px;
+}
+@font-face {
+  font-family: medieval;
+  src: url('fonts/luxcontratenebrascond.ttf');
+}
+body {
+  background-color: var(--greyblack);
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Mono", monospace;
+}
+@keyframes movingBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: var(--backgroundSize) var(--backgroundSize);
+  }
+}
+#entete {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 65px;
+}
+#entete p {
+  font-family: "Literata";
+  color: var(--blanco);
+  margin: 0 0 0 40px;
+  cursor: pointer;
+}
+.contenu {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+.contenuXL {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 70%;
+  display: flex;
+}
+.contenuL {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+}
+.titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 10px 40px;
+  display: flex;
+}
+.itemblocV, .itemblocM, .itemblocVG {
+  text-transform: uppercase;
+  min-height: 60px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-position 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.itemblocV:hover, .itemblocM:hover, .itemblocVG:hover {
+  background-position: 82% -1px;
+	color: var(--mentos);
+}
+.itemblocVG {
+  background: url("images/SVG/butte3.svg") no-repeat var(--violine);
+  background-size: 8%;
+  background-position: 85% -1px;
+  color: var(--black);
+}
+.itemblocV {
+  background: url("images/SVG/butte1.svg") no-repeat var(--violine);
+  background-size: 8%;
+  background-position: 85% -1px;
+  color: var(--black);
+}
+.itemblocM {
+  background: url("images/SVG/butte2.svg") no-repeat var(--cookie);
+  background-size: 8%;
+  background-position: 90% -1px;
+  color: var(--black);
+}
+.titleblocA {
+  background: url("images/SVG/butte2.svg") no-repeat;
+  background-size: 8%;
+  background-position: 90% -1px;
+}
+.titleblocB {
+  background: url("images/SVG/butte3.svg") no-repeat;
+  background-size: 8%;
+  background-position: 90% -1px;
+}
+.titleblocA, .titleblocB {
+  font-family: "Literata";
+  height: 60px;
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--blanco);
+  text-transform: capitalize;
+}
+#logo {
+  background: url("images/SVG/butte1.svg") no-repeat var(--mentos);
+  background-size: 30%;
+  background-position: 0 -1px;
+  aspect-ratio: 1 / 1;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo img {
+  width: 45%;
+}
+#qui {
+  background: url("images/SVG/butte1.svg") no-repeat var(--violine);
+  background-size: 40%;
+  background-position: right -1px;
+  min-height: 100px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+#events, #lecteur {
+  display: table-cell;
+}
+#lecteur {
+  color: var(--mentos);
+  height: 100%;
+  vertical-align: top;
+  background-image: url("images/pattern2.jpg");
+  background-size: var(--backgroundSize);
+  animation: movingBackground 5s linear infinite;
+}
+#section2 {
+  display: table !important;
+}
+.medieval {
+  font-family: "medieval";
+}
+#petitlecteur {
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  display: none;
+  background-image: url("images/pattern2.jpg");
+  background-size: var(--backgroundSize);
+  animation: movingBackground 5s linear infinite;
+}
+#petitmenu {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  background-image: none !important;
+  background-color: var(--blanco);
+  width: 10%;
+  margin: 0;
+  padding: 0;
+  display: none;
+  text-transform: uppercase;
+}
+#petitmenu p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+#petitmenu p:hover {
+  transform: rotate(45deg);
+}
+#rubrik {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: 0;
+  background-color: var(--darkgrey);
+  color: var(--blanco)
+}
+#rubrik p {
+  box-sizing: border-box;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+/* TICKER */
+.ticker-wrap {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: normal;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: var(--greyblack);
+}
+.ticker {
+  display: inline-block;
+  margin-top: 5px;
+  animation: marquee 20s linear infinite;
+}
+.item-collection-1 {
+  position: relative;
+  left: 0%;
+  animation: swap 20s linear infinite;
+}
+/* Transition */
+@keyframes marquee {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(-100%)
+  }
+}
+@keyframes swap {
+  0%, 50% {
+    left: 0%;
+  }
+  50.01%, 100% {
+    left: 100%;
+  }
+}
+/* RESIZE */
+@media screen and (max-width: 500px) {
+  #entete {
+    display: none;
+  }
+  #logo img {
+    width: 90%;
+  }
+  #logo, #qui {
+    background-image: none;
+  }
+  #qui {
+    width: 60%;
+  }
+  .ticker-wrap {
+    font-size: 20px;
+  }
+  #shows {
+    background-image: none;
+  }
+  #petitmenu {
+    display: flex;
+    background-color: var(--blanco);
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG {
+    background-position: 95% 0;
+    background-size: 5%;
+  }
+}
+@media screen and (min-width: 500px) {
+  #petitmenu, #rubrik {
+    display: none;
+  }
+  #qui {
+    width: 70% !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #logo img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #events {
+    width: 100% !important;
+  }
+  #lecteur {
+    display: none;
+  }
+  #petitlecteur {
+    display: block;
+  }
+}
+/* LES LIEBS */
+#rubrik a:hover {
+  color: var(--darkgrey);
+  text-decoration: none;
+}
+/* selected link */
+#rubrik a:active {
+  color: var(--darkgrey);
+  text-decoration: none;
+}
+#rubrik a:link {
+  color: var(--darkgrey);
+  text-decoration: none;
+  /*  background-color: #000;*/
+}
+#rubrik a:visited {
+  color: var(--darkgrey);
+  text-decoration: none;
+  /*  background-color: #000;*/
+}
+#entete a:hover {
+  color: var(--blanco);
+  text-decoration: none;
+}
+/* selected link */
+#entete a:active {
+  color: var(--blanco);
+  text-decoration: none;
+}
+#entete a:link {
+  color: var(--blanco);
+  text-decoration: none;
+  /*  background-color: #000;*/
+}
+#entete a:visited {
+  color: var(--blanco);
+  text-decoration: none;
+  /*  background-color: #000;*/
+}

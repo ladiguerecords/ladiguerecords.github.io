@@ -118,7 +118,7 @@ body {
   background-size: 30%;
   background-position: 0 -1px;
   aspect-ratio: 1 / 1;
-  min-height: 100px;
+  /*min-height: 100px;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +130,7 @@ body {
   background: url("images/SVG/butte1.svg") no-repeat var(--violine);
   background-size: 40%;
   background-position: right -1px;
-  min-height: 100px;
+  /*min-height: 100px;*/
   padding: 0;
   align-items: center;
   justify-content: center;
@@ -290,35 +290,30 @@ body {
     display: block;
   }
 }
-/* LES LIEBS */
-#rubrik a:hover {
-  color: var(--darkgrey);
-  text-decoration: none;
-}
-/* selected link */
-#rubrik a:active {
-  color: var(--darkgrey);
-  text-decoration: none;
+/* LES LIEN */
+a{
+    transition: 1s;
 }
 #rubrik a:link {
-  color: var(--darkgrey);
+  color: var(--blanco);
   text-decoration: none;
   /*  background-color: #000;*/
 }
 #rubrik a:visited {
-  color: var(--darkgrey);
+  color: var(--blanco);
   text-decoration: none;
   /*  background-color: #000;*/
 }
-#entete a:hover {
-  color: var(--blanco);
+#rubrik a:hover {
+  color: var(--mentos);
   text-decoration: none;
 }
 /* selected link */
-#entete a:active {
+#rubrik a:active {
   color: var(--blanco);
   text-decoration: none;
 }
+
 #entete a:link {
   color: var(--blanco);
   text-decoration: none;
@@ -328,4 +323,32 @@ body {
   color: var(--blanco);
   text-decoration: none;
   /*  background-color: #000;*/
+}
+#entete a:hover {
+  color: var(--mentos);
+  text-decoration: none;
+}
+/* selected link */
+#entete a:active {
+  color: var(--mentos);
+  text-decoration: underline;
+}
+#section2 a:link {
+  color: var(--greyblack);
+  text-decoration: none;
+  /*  background-color: #000;*/
+}
+#section2 a:visited {
+  color: var(--greyblack);
+  text-decoration: none;
+  /*  background-color: #000;*/
+}
+#section2 a:hover {
+  color: var(--mentos)!important;
+  text-decoration: none !important;
+}
+/* selected link */
+#section2 a:active {
+  color: var(--mentos);
+  text-decoration: none;
 }

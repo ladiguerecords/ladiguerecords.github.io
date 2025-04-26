@@ -1,26 +1,56 @@
-// JavaScript Document
-var menuopen = false;
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                               Init                                                                        //
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$(document).ready(function () {
-  $('#petitmenu').on('click', function (e) {
-    e.preventDefault();
-    if (!menuopen) {
-      menuopen = true;
-      callmenu(0, 60);
-    } else {
-      menuopen = false;
-      callmenu(60, 0);
-    }
-  })
-});
-
-function callmenu(quiW, rubW) {
-  $('#qui').stop(true, true).animate({
-    'width': quiW + '%',
-  }, 500);
-  $('#rubrik').stop(true, true).animate({
-    'width': rubW + '%',
-  }, 500);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MADE IN ARLES</title>
+<link rel="stylesheet" href="styleDigue.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+<script src="jquery.js"></script> 
+<script src="ladigue.js"></script>
+</head>
+<body>
+<div id="entete"> <img src="images/SVG/logotype.svg" width="40px" />
+  <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Bandcamp</a></p>
+  <p><a href="https://www.youtube.com/@LaDigueRecords/" target="_blank">YouTube</a></p>
+  <p><a href="https://mastodon.social/@ladigue" target="_blank">Mastodon</a></p>
+  <p><a href="mailto:ladiguerecords@gmail.com">Mail</a></p>
+</div>
+<div class="contenu" id="section1">
+  <div class="contenuL" id="logo"> <img src="images/SVG/logo.svg" width="45%"/> </div>
+  <div class="contenuXL" id="qui">
+    <div class="ticker-wrap">
+      <div class="ticker"><span class="item-collection-1">◍ La digue records ◍ collectif d'artistes ◍ micro-label ◍ Arles (FR) </span><span class="item-collection-2">◍ La digue records ◍ collectif d'artistes ◍ micro-label ◍ Arles (FR) </span></div>
+    </div>
+  </div>
+  <div id="petitmenu">
+    <p>❈</p>
+  </div>
+  <div id="rubrik">
+  <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Bandcamp</a></p>
+  <p><a href="https://www.youtube.com/@LaDigueRecords/" target="_blank">YouTube</a></p>
+  <p><a href="https://mastodon.social/@ladigue" target="_blank">Mastodon</a></p>
+  <p><a href="mailto:ladiguerecords@gmail.com">Mail</a></p>
+  </div>
+</div>
+<div class="contenu" id="section2">
+  <div class="contenuXL" id="events">
+    <div class="titleblocA" id="shows">Shows</div>
+    <a href="https://www.latraversemarseille.fr/event/46?t=Faux_Semblants" target="_blank"><div class="itemblocV" id="03052025" type="show">Performance • "La Traverse", Marseille — 03/05/2025</div></a>
+    <a href="https://www.youtube.com/playlist?list=PLi6kb5Yxr3xrRVu30wpGV5rOpKwHUBwX6" target="_blank"><div class="itemblocM" id="23032025" type="show">Soirée d'ecoute I • "Le Ranch", Tarascon — 23/03/2025</div></a>
+    <div class="titleblocB">editions</div>
+    <a href="https://errorishuman.bandcamp.com/album/europa-to-europa?label=2589190083&tab=music" target="_blank"><div class="itemblocV">Err is human •&nbsp;"Europa (to) EUropa"&nbsp;• LP — 21/03/2025</div></a>
+    <a href="https://errorishuman.bandcamp.com/album/hyperselfies?label=2589190083&tab=music" target="_blank"><div class="itemblocM">Err is human •&nbsp;"Hyperselfies"&nbsp;• EP — 12/01/2023</div></a>
+    <div class="titleblocB">Artistes</div>
+    <div class="itemblocV">Tristan Deboise =&nbsp;<a href="https://tristandeboise.bandcamp.com/" target="_blank">bandcamp</a>&nbsp;+&nbsp;<a href="https://mastodon.social/@tristandeboise" target="_blank">mastodon</a>&nbsp;+&nbsp;<a href="https://www.instagram.com/tristan_deboise" target="_blank">instagram</a></div>
+    <div class="itemblocM">Pascal Montali =&nbsp;<a href="https://szsoundz.bandcamp.com" target="_blank">bandcamp</a> </div>
+    <div class="itemblocVG">Guillaume Pascale =&nbsp;<a href="https://www.errorishuman.com" target="_blank">website</a>&nbsp;+&nbsp;<a href="https://errorishuman.bandcamp.com/" target="_blank">bandcamp</a>&nbsp;+&nbsp;<a href="https://mastodon.social/@errishuman" target="_blank">mastodon</a>&nbsp;+&nbsp;<a href="https://www.youtube.com/@errishumain" target="_blank">youtube</a></div>
+    <div class="itemblocM">Reeve Schumacher =&nbsp;<a href="https://schumacherreeve.blogspot.com/" target="_blank">website</a>&nbsp;+&nbsp;<a href="https://reeveschumacher.bandcamp.com/" target="_blank">bandcamp</a>&nbsp;+&nbsp;<a href="https://mastodon.social/@reeveschu" target="_blank">mastodon</a>&nbsp;+&nbsp;<a href="https://www.youtube.com/@reeveschumacher842" target="_blank">youtube</a>&nbsp;+&nbsp;<a href="https://www.instagram.com/reeve.schumacher/" target="_blank">instagram</a></div>
+  </div>
+  <div class="contenuL" id="lecteur">&nbsp;</div>
+</div>
+<div id="petitlecteur"></div>
+</body>
+</html>

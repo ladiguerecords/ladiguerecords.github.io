@@ -8,10 +8,10 @@ $(document).ready(function () {
     e.preventDefault();
     if (!menuopen) {
       menuopen = true;
-      callmenu(0, 60);
+      callmenu(0, 50);
     } else {
       menuopen = false;
-      callmenu(60, 0);
+      callmenu(50, 0);
     }
   })
 });

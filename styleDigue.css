@@ -50,14 +50,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 70%;
+  width: 80%;
   display: flex;
 }
 .contenuL {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 30%;
+  width: 20%;
 }
 .titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG {
   box-sizing: border-box;
@@ -133,7 +133,7 @@ body {
 }
 #qui {
   background: url("images/SVG/butte1.svg") no-repeat var(--violine);
-  background-size: 40%;
+  background-size: 20%;
   background-position: right -1px;
   /*min-height: 100px;*/
   padding: 0;
@@ -250,8 +250,11 @@ body {
   #logo, #qui {
     background-image: none;
   }
+	#logo{
+		width:40%;
+	}
   #qui {
-    width: 60%;
+    width: 50%;
   }
   .ticker-wrap {
     font-size: 20px;
@@ -276,7 +279,7 @@ body {
     display: none;
   }
   #qui {
-    width: 70% !important;
+    width: 80% !important;
   }
 }
 @media screen and (max-width: 1280px) {

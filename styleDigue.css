@@ -65,6 +65,11 @@ body {
   margin: 0;
   padding: 10px 40px;
   display: flex;
+  flex-wrap: wrap;
+}
+.titleblocA p, .titleblocB p, .itemblocV p, .itemblocM p, .itemblocVG p {
+	margin: 0;
+	padding: 0;
 }
 .itemblocV, .itemblocM, .itemblocVG {
   text-transform: uppercase;
@@ -293,6 +298,8 @@ body {
 /* LES LIEN */
 a{
     transition: 1s;
+	
+
 }
 #rubrik a:link {
   color: var(--blanco);
@@ -336,6 +343,8 @@ a{
 #section2 a:link {
   color: var(--greyblack);
   text-decoration: none;
+/*word-break: break-all;*/ 
+
   /*  background-color: #000;*/
 }
 #section2 a:visited {

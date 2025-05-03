@@ -84,37 +84,37 @@ body {
 }
 .itemblocVG {
   background: url("images/SVG/butte3.svg") no-repeat var(--violine);
-  background-size: 8%;
+  background-size: 5%;
   background-position: 85% -1px;
   color: var(--black);
 }
 .itemblocV {
   background: url("images/SVG/butte1.svg") no-repeat var(--violine);
-  background-size: 8%;
+  background-size: 5%;
   background-position: 85% -1px;
   color: var(--black);
 }
 .itemblocM {
   background: url("images/SVG/butte2.svg") no-repeat var(--cookie);
-  background-size: 8%;
+  background-size: 5%;
   background-position: 90% -1px;
   color: var(--black);
 }
 .titleblocA {
   background: url("images/SVG/butte2.svg") no-repeat;
-  background-size: 8%;
+  background-size: 5%;
   background-position: 90% -1px;
 }
 .titleblocB {
   background: url("images/SVG/butte3.svg") no-repeat;
-  background-size: 8%;
+  background-size: 5%;
   background-position: 90% -1px;
 }
 .titleblocA, .titleblocB {
   font-family: "Literata";
-  height: 40px;
+  min-height: 40px;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 20px;
   color: var(--blanco);
   text-transform: capitalize;
 }

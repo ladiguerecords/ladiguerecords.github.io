@@ -18,27 +18,48 @@ body {
   padding: 0;
   font-family: "IBM Plex Mono", monospace;
 }
-@keyframes movingBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: var(--backgroundSize) var(--backgroundSize);
-  }
-}
 #entete {
+  position: fixed;
   box-sizing: border-box;
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
-  padding: 0 0 0 65px;
+  padding: 0 0 0 40px;
+  background-color: rgba(0, 0, 0, 1.00);
+  z-index: 1;
 }
 #entete p {
   font-family: "Literata";
   color: var(--blanco);
   margin: 0 0 0 40px;
   cursor: pointer;
+}
+#backgrounds {
+  height: 100vh;
+  z-index: 2;
+  background-image: url("images/SVG/logoblanc.svg"), url("images/pattern2.jpg");
+  background-size: 20%, var(--backgroundSize);
+  background-repeat: no-repeat, repeat;
+  animation: movingBackground 5s linear infinite;
+}
+#vagueback {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 79px;
+  width: 10%;
+  height: inherit;
+  background-image: url("images/SVG/butte1.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+#back {
+  opacity: 0;
+}
+#section1 {
+  position: sticky;
+  top: 80px;
 }
 .contenu {
   box-sizing: border-box;
@@ -59,31 +80,76 @@ body {
   padding: 0;
   width: 20%;
 }
-.titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG {
+.titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG, .itemblocB {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  padding: 10px 40px;
   display: flex;
   flex-wrap: wrap;
 }
-.titleblocA p, .titleblocB p, .itemblocV p, .itemblocM p, .itemblocVG p {
-	margin: 0;
-	padding: 0;
+.titleblocA, .titleblocB {
+  padding: 5px 40px;
 }
-.itemblocV, .itemblocM, .itemblocVG {
+.titleblocA p, .titleblocB p {
+  margin: 0;
+  padding: 0;
+}
+.itemblocV p, .itemblocM p, .itemblocVG p, .itemblocB p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0 0 40px;
+  margin: 0;
+  height: 40px;
+  line-height: 40px;
+}
+.itemblocB p {
+  color: var(--blanco);
+}
+.titre, .nom {
+  width: 23%;
+}
+.lieu, .web {
+  width: 15%;
+}
+.ville, .bc {
+  width: 10%;
+}
+.date, .rs {
+  width: 10%;
+}
+.titre, .lieu, .ville, .date, .nom, .rs, .bc, .web {
+  background-color: none;
+  text-decoration: underline solid transparent;
+  transition: text-decoration 500ms ease;
+}
+.nom:hover, .rs:hover, .bc:hover, .web:hover {
+  text-decoration: underline solid #000;
+}
+.itemblocV:hover > .titre, .itemblocM:hover > .titre, .itemblocVG:hover > .titre {
+  text-decoration: underline solid #000;
+}
+.itemblocV:hover > .lieu, .itemblocM:hover > .lieu, .itemblocVG:hover > .lieu {
+  text-decoration: underline solid #000;
+}
+.itemblocV:hover > .ville, .itemblocM:hover > .ville, .itemblocVG:hover > .ville {
+  text-decoration: underline solid #000;
+}
+.itemblocV:hover > .date, .itemblocM:hover > .date, .itemblocVG:hover > .date {
+  text-decoration: underline solid #000;
+}
+.itemblocV, .itemblocM, .itemblocVG, .itemblocB {
   text-transform: uppercase;
   min-height: 40px;
   align-items: center;
   cursor: pointer;
-  transition: background-position 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: background-position 0.5s ease-in-out;
 }
 .itemblocV:hover, .itemblocM:hover, .itemblocVG:hover {
   background-position: 82% -1px;
-	color: var(--mentos);
 }
 .itemblocVG {
-  background: url("images/SVG/butte3.svg") no-repeat var(--violine);
+  background: url("images/SVG/butte4.svg") no-repeat var(--violine);
   background-size: 5%;
   background-position: 85% -1px;
   color: var(--black);
@@ -95,7 +161,7 @@ body {
   color: var(--black);
 }
 .itemblocM {
-  background: url("images/SVG/butte2.svg") no-repeat var(--cookie);
+  background: url("images/SVG/butte2.svg") no-repeat var(--mentos);
   background-size: 5%;
   background-position: 90% -1px;
   color: var(--black);
@@ -106,36 +172,31 @@ body {
   background-position: 90% -1px;
 }
 .titleblocB {
-  background: url("images/SVG/butte3.svg") no-repeat;
+  background: url("images/SVG/butte4.svg") no-repeat;
   background-size: 5%;
   background-position: 90% -1px;
 }
 .titleblocA, .titleblocB {
   font-family: "Literata";
   min-height: 40px;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 20px;
   color: var(--blanco);
   text-transform: capitalize;
 }
 #logo {
-  background: url("images/SVG/butte1.svg") no-repeat var(--blanco);
-  background-size: 30%;
-  background-position: 0 -1px;
   aspect-ratio: 1 / 1;
   /*min-height: 100px;*/
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000;
 }
 #logo img {
   width: 45%;
 }
 #qui {
-  background: url("images/SVG/butte1.svg") no-repeat var(--violine);
-  background-size: 20%;
-  background-position: right -1px;
-  /*min-height: 100px;*/
+  background: var(--violine);
   padding: 0;
   align-items: center;
   justify-content: center;
@@ -149,7 +210,7 @@ body {
   vertical-align: top;
   background-image: url("images/pattern2.jpg");
   background-size: var(--backgroundSize);
-  animation: movingBackground 5s linear infinite;
+  animation: movingBackground2 5s linear infinite;
 }
 #section2 {
   display: table !important;
@@ -165,7 +226,7 @@ body {
   display: none;
   background-image: url("images/pattern2.jpg");
   background-size: var(--backgroundSize);
-  animation: movingBackground 5s linear infinite;
+  animation: movingBackground2 5s linear infinite;
 }
 #petitmenu {
   font-family: "IBM Plex Mono", monospace;
@@ -192,7 +253,7 @@ body {
   display: block;
   overflow: hidden;
   width: 0;
-  background-color: var(--darkgrey);
+  background-color: var(--black);
   color: var(--blanco)
 }
 #rubrik p {
@@ -222,7 +283,50 @@ body {
   left: 0%;
   animation: swap 20s linear infinite;
 }
+/* TABLEAUX*/
+table {
+  table-layout: fixed;
+  border: 0;
+  width: 75%;
+}
+tr {
+  background-color: var(--blanco);
+  color: var(--black);
+  height: 40px;
+  border: none;
+}
+td {
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0;
+  text-align: left;
+  padding: 0 0 0 40px;
+}
+.Lmenthe {
+  background-color: var(--mentos);
+}
+.Lviolette {
+  background-color: var(--violine);
+}
 /* Transition */
+@keyframes movingBackground {
+  from {
+    background-position: center, 0 0;
+  }
+  to {
+    background-position: center, var(--backgroundSize) var(--backgroundSize);
+  }
+}
+@keyframes movingBackground2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: var(--backgroundSize) var(--backgroundSize);
+  }
+}
 @keyframes marquee {
   0% {
     transform: translateX(0)
@@ -240,9 +344,16 @@ body {
   }
 }
 /* RESIZE */
-@media screen and (max-width: 500px) {
-  #entete {
+@media screen and (max-width: 600px) {
+  #backgrounds {
+    background-size: 50%, var(--backgroundSize);
+  }
+  #entete, #vagueback {
     display: none;
+  }
+  #section1 {
+    position: fixed;
+    top: 0;
   }
   #logo img {
     width: 90%;
@@ -250,9 +361,9 @@ body {
   #logo, #qui {
     background-image: none;
   }
-	#logo{
-		width:40%;
-	}
+  #logo {
+    width: 40%;
+  }
   #qui {
     width: 50%;
   }
@@ -273,8 +384,14 @@ body {
     background-position: 95% 0;
     background-size: 5%;
   }
+  .date, .ville, .lieu, .rs, .bc, .web {
+    width: 0;
+  }
+  .titre, .nom {
+    width: 60%;
+  }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   #petitmenu, #rubrik {
     display: none;
   }
@@ -299,10 +416,8 @@ body {
   }
 }
 /* LES LIEN */
-a{
-    transition: 1s;
-	
-
+a {
+  transition: 1s;
 }
 #rubrik a:link {
   color: var(--blanco);
@@ -323,7 +438,6 @@ a{
   color: var(--blanco);
   text-decoration: none;
 }
-
 #entete a:link {
   color: var(--blanco);
   text-decoration: none;
@@ -335,20 +449,17 @@ a{
   /*  background-color: #000;*/
 }
 #entete a:hover {
-  color: var(--mentos);
-  text-decoration: none;
+  color: var(--blanco);
+  text-decoration: underline;
 }
 /* selected link */
 #entete a:active {
-  color: var(--mentos);
+  color: var(--blanco);
   text-decoration: underline;
 }
 #section2 a:link {
   color: var(--greyblack);
   text-decoration: none;
-/*word-break: break-all;*/ 
-
-  /*  background-color: #000;*/
 }
 #section2 a:visited {
   color: var(--greyblack);
@@ -356,11 +467,11 @@ a{
   /*  background-color: #000;*/
 }
 #section2 a:hover {
-  color: var(--mentos)!important;
-  text-decoration: none !important;
+  color: var(--greyblack) !important;
+  text-decoration: underline !important;
 }
 /* selected link */
 #section2 a:active {
-  color: var(--mentos);
+  color: var(--greyblack);
   text-decoration: none;
 }

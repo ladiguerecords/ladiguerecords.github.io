@@ -1,10 +1,10 @@
 // JavaScript Document
-var menuopen = false;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                               Init                                                                        //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
   //video back
+ //video back
   jQuery('[data-vbg]').youtube_background({
     'volume': 1,
     'muted': false,
@@ -21,17 +21,6 @@ $(document).ready(function () {
       'opacity': 1,
     }, 3000);
   });
-  //menu
-  $('#petitmenu').on('click', function (e) {
-    e.preventDefault();
-    if (!menuopen) {
-      menuopen = true;
-      callmenu(0, 50);
-    } else {
-      menuopen = false;
-      callmenu(50, 0);
-    }
-  })
   //web artists
   $('.web, .bc, .rs, .itemblocVG, .itemblocV, .itemblocM').on('click', function (e) {
     e.preventDefault();
@@ -41,11 +30,9 @@ $(document).ready(function () {
   })
 });
 /////////////////////////////////////////////////////////////// Les fonctions
-function callmenu(quiW, rubW) {
-  $('#qui').stop(true, true).animate({
-    'width': quiW + '%',
-  }, 500);
-  $('#rubrik').stop(true, true).animate({
-    'width': rubW + '%',
-  }, 500);
+function viewvideo() {
+  $('#back').animate({
+    'opacity': 1,
+  }, 3000);
 }
+

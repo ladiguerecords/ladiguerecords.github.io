@@ -18,6 +18,15 @@ body {
   padding: 0;
   font-family: "IBM Plex Mono", monospace;
 }
+html {
+  scroll-behavior: smooth;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 #entete {
   position: fixed;
   box-sizing: border-box;
@@ -31,8 +40,9 @@ body {
 }
 #entete p {
   font-family: "Literata";
+	font-size: 14px;
   color: var(--blanco);
-  margin: 0 0 0 40px;
+  margin: 0 0 0 15px;
   cursor: pointer;
 }
 #backgrounds {
@@ -58,8 +68,9 @@ body {
   opacity: 0;
 }
 #section1 {
+  padding-top: 80px;
   position: sticky;
-  top: 80px;
+  top: 0;
 }
 .contenu {
   box-sizing: border-box;
@@ -218,36 +229,6 @@ body {
 .medieval {
   font-family: "medieval";
 }
-#petitlecteur {
-  width: 100%;
-  height: 60px;
-  margin: 0;
-  padding: 0;
-  display: none;
-  background-image: url("images/pattern2.jpg");
-  background-size: var(--backgroundSize);
-  animation: movingBackground2 5s linear infinite;
-}
-#petitmenu {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  background-image: none !important;
-  background-color: var(--blanco);
-  width: 10%;
-  margin: 0;
-  padding: 0;
-  display: none;
-  text-transform: uppercase;
-}
-#petitmenu p {
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  transition: transform .3s ease-in-out;
-}
-#petitmenu p:hover {
-  transform: rotate(45deg);
-}
 #rubrik {
   box-sizing: border-box;
   display: block;
@@ -343,17 +324,22 @@ td {
     left: 100%;
   }
 }
+/* GESTION DE SCROLL */
 /* RESIZE */
-@media screen and (max-width: 600px) {
-  #backgrounds {
-    background-size: 50%, var(--backgroundSize);
+@media screen and (min-width: 600px) {
+  #petitmenu, #rubrik {
+    display: none;
   }
-  #entete, #vagueback {
+  #qui {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #entete {
     display: none;
   }
   #section1 {
-    position: fixed;
-    top: 0;
+    padding-top: 0;
   }
   #logo img {
     width: 90%;
@@ -365,20 +351,13 @@ td {
     width: 40%;
   }
   #qui {
-    width: 50%;
+    width: 60%;
   }
   .ticker-wrap {
     font-size: 20px;
   }
   #shows {
     background-image: none;
-  }
-  #petitmenu {
-    display: flex;
-    background-color: var(--blanco);
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
   }
   .titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG {
     background-position: 95% 0;
@@ -389,14 +368,6 @@ td {
   }
   .titre, .nom {
     width: 60%;
-  }
-}
-@media screen and (min-width: 600px) {
-  #petitmenu, #rubrik {
-    display: none;
-  }
-  #qui {
-    width: 80% !important;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -411,8 +382,12 @@ td {
   #lecteur {
     display: none;
   }
-  #petitlecteur {
-    display: block;
+  #intro {
+    display: none;
+  }
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
   }
 }
 /* LES LIEN */

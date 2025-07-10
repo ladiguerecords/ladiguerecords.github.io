@@ -1,107 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NOUS SOMMES LA DIGUE</title>
+<meta name="author" content="www.errorishuman.com">
+<meta name="publisher" content="La Digue Records">
+<meta name="copyright" content="La Digue Records">
+<meta name="Subject" content="musique">
+<meta name="Identifier-Url" content="https://ladiguerecords.github.io">
+<meta name="Robots" content="index">
+<meta name="Rating" content="general">
+<meta name="Distribution" content="global">
+<!-- Display compability for iOS Devices -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="La Digue">
+<meta name="pinterest" content="nopin" />
 <link rel="stylesheet" href="styleDigue.css" />
+<link href="video.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
-<script type="text/javascript" src="https://unpkg.com/youtube-background/jquery.youtube-background.min.js"></script> 
-<script src="ladigue.js"></script>
+<script type="text/javascript" src="jquery.youtube-background.js"></script> 
+<script type="text/javascript" src="youtube-background-experimental.js"></script>
 </head>
 <body>
-<div id="entete"> <img src="images/SVG/logotype.svg" width="40px" />
+<div id="entete"> <img style="margin-right: 20px" src="images/SVG/logotype.svg" width="40px" />
   <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Bandcamp</a></p>
   <p><a href="https://www.youtube.com/@LaDigueRecords/" target="_blank">YouTube</a></p>
+  <p><a href="https://www.instagram.com/ladiguerecords/" target="_blank">Instagram</a></p>
   <p><a href="https://mastodon.social/@ladigue" target="_blank">Mastodon</a></p>
   <p><a href="mailto:ladiguerecords@gmail.com">Mail</a></p>
 </div>
-<div id="backgrounds">
-  <div id="back" data-vbg="https://www.youtube.com/watch?v=6En75XsII8g&list=PLi6kb5Yxr3xrfn5K3eylWYE7RtPoxMTC5"></div>
-	<div id="vagueback"></div>
-</div>
-<div class="contenu" id="section1">
-  <div class="contenuL" id="logo"> <img src="images/SVG/logoblanc.svg" width="45%"/> </div>
-  <div class="contenuXL" id="qui">
-    <div class="ticker-wrap">
-      <div class="ticker"><span class="item-collection-1">◍ La digue records ◍ collectif d'artistes ◍ micro-label ◍ Arles (FR) </span><span class="item-collection-2">◍ La digue records ◍ collectif d'artistes ◍ micro-label ◍ Arles (FR) </span></div>
+<section id="intro">
+  <div id="backgrounds">
+    <div id="back" data-vbg="https://www.youtube.com/watch?v=6En75XsII8g&list=PLi6kb5Yxr3xrfn5K3eylWYE7RtPoxMTC5"></div>
+    <div id="vagueback"></div>
+  </div>
+</section>
+<section id="main">
+  <div class="contenu" id="section1">
+    <div class="contenuL" id="logo"> <img src="images/SVG/logoblanc.svg" width="45%"/> </div>
+    <div class="contenuXL" id="qui">
+      <div class="ticker-wrap">
+        <div class="ticker"><span class="item-collection-1">◍ La digue records ◍ collectif d'artistes ◍ micro-label ◍ Arles (FR) </span><span class="item-collection-2">◍ La digue records ◍ collectif d'artistes ◍ micro-label ◍ Arles (FR) </span></div>
+      </div>
+    </div>
+    <div id="rubrik">
+      <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Bandcamp</a></p>
+      <p><a href="https://www.youtube.com/@LaDigueRecords/" target="_blank">YouTube</a></p>
+      <p><a href="https://mastodon.social/@ladigue" target="_blank">Mastodon</a></p>
+      <p><a href="mailto:ladiguerecords@gmail.com">Mail</a></p>
     </div>
   </div>
-  <div id="petitmenu">
-    <p>+</p>
+  <div class="contenu" id="section2">
+    <div class="contenuXL" id="events">
+      <div class="titleblocA" id="shows">Shows</div>
+      <div class="itemblocV"  type="show" adresse="https://www.latraversemarseille.fr/event/46?t=Faux_Semblants">
+        <p class="titre">Partitions Itératives X</p>
+        <p class="lieu">"La Traverse"</p>
+        <p class="ville">Marseille</p>
+        <p class="date">03/05/2025</p>
+      </div>
+      <div class="itemblocM" type="show" adresse="https://youtube.com/playlist?list=PLi6kb5Yxr3xrRVu30wpGV5rOpKwHUBwX6&si=fLest99zQZKqupdA">
+        <p class="titre">Soirée d'ecoute I</p>
+        <p class="lieu">"Le Ranch"</p>
+        <p class="ville">Tarascon</p>
+        <p class="date">23/03/2025</p>
+      </div>
+      <div class="itemblocVG" type="show" adresse="https://www.errorishuman.com/#piv">
+        <p class="titre">Partitions Itératives V</p>
+        <p class="lieu">"La Digue"</p>
+        <p class="ville">Port St Louis</p>
+        <p class="date">27/09/2024</p>
+      </div>
+      <div class="titleblocA">editions</div>
+      <div class="itemblocV"  type="show" adresse="https://www.errorishuman.com/#e2eost">
+        <p class="titre">Europa(to)Europa</p>
+        <p class="lieu">Err is human</p>
+        <p class="ville">LP</p>
+        <p class="date">21/03/2025</p>
+      </div>
+      <div class="itemblocM" type="show" adresse="https://www.errorishuman.com/#hyperselfiesEP">
+        <p class="titre">Hyperselfies</p>
+        <p class="lieu">Err is human</p>
+        <p class="ville">EP</p>
+        <p class="date">12/01/2023</p>
+      </div>
+      <div class="titleblocB">Artistes</div>
+      <div class="itemblocV" type="show" adresse="null">
+        <p class="nom">Tristan Deboise</p>
+        <p class="web" adresse="null">—</p>
+        <p class="bc" adresse="https://tristandeboise.bandcamp.com/">Bandcamp</p>
+        <p class="rs" adresse="https://www.instagram.com/tristan_deboise">instagram</p>
+      </div>
+      <div class="itemblocM" type="show" adresse="null">
+        <p class="nom">Pascal Montali</p>
+        <p class="web" adresse="null">—</p>
+        <p class="bc" adresse="https://szsoundz.bandcamp.com">Bandcamp</p>
+        <p class="rs" adresse="null">—</p>
+      </div>
+      <div class="itemblocVG" type="show" adresse="null">
+        <p class="nom">Guillaume Pascale</p>
+        <p class="web" adresse="https://www.errorishuman.com">website</p>
+        <p class="bc" adresse="https://errishuman.bandcamp.com/">Bandcamp</p>
+        <p class="rs" adresse="https://mastodon.social/@errishuman">mastodon</p>
+      </div>
+      <div class="itemblocM" type="show" adresse="null">
+        <p class="nom">Reeve Schumacher</p>
+        <p class="web" adresse="https://schumacherreeve.blogspot.com/">website</p>
+        <p class="bc" adresse="https://reeveschumacher.bandcamp.com">Bandcamp</p>
+        <p class="rs" adresse="https://www.instagram.com/reeve.schumacher/">instagram</p>
+      </div>
+      <div class="titleblocB">La Digue</div>
+      <div class="itemblocV" type="show" adresse="null">
+        <p class="titre">Qui Sommes-nous ?</p>
+        <p class="lieu"></p>
+        <p class="ville"></p>
+        <p class="date"></p>
+      </div>
+      <div class="itemblocM" type="show" adresse="null">
+        <p class="titre">Newsletter</p>
+        <p class="lieu"></p>
+        <p class="ville"></p>
+        <p class="date"></p>
+      </div>
+    </div>
+    <div class="contenuL" id="lecteur">&nbsp;</div>
   </div>
-  <div id="rubrik">
-    <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Bandcamp</a></p>
-    <p><a href="https://www.youtube.com/@LaDigueRecords/" target="_blank">YouTube</a></p>
-    <p><a href="https://mastodon.social/@ladigue" target="_blank">Mastodon</a></p>
-    <p><a href="mailto:ladiguerecords@gmail.com">Mail</a></p>
-  </div>
-</div>
-<div class="contenu" id="section2">
-  <div class="contenuXL" id="events">
-    <div class="titleblocA" id="shows">Shows</div>
-    <div class="itemblocV"  type="show" adresse="https://www.youtube.com/watch?v=Mhqx4jzetiQ">
-      <p class="titre">Partitions Itératives X</p>
-      <p class="lieu">"La Traverse"</p>
-      <p class="ville">Marseille</p>
-      <p class="date">03/05/2025</p>
-    </div>
-    <div class="itemblocM" type="show" adresse="https://www.youtube.com/watch?v=2yrMxsGKRkw&list=PLi6kb5Yxr3xrRVu30wpGV5rOpKwHUBwX6&index=4">
-      <p class="titre">Soirée d'ecoute I</p>
-      <p class="lieu">"Le Ranch"</p>
-      <p class="ville">Tarascon</p>
-      <p class="date">23/03/2025</p>
-    </div>
-	    <div class="itemblocVG" type="show" adresse="https://www.errorishuman.com/#piv">
-      <p class="titre">Partitions Itératives V</p>
-      <p class="lieu">"La Digue"</p>
-      <p class="ville">Port St Louis</p>
-      <p class="date">27/09/2024</p>
-    </div>
-    <div class="titleblocA">editions</div>
-    <div class="itemblocV"  type="show" adresse="https://www.errorishuman.com/#e2eost">
-      <p class="titre">Europa(to)Europa</p>
-      <p class="lieu">Err is human</p>
-      <p class="ville">LP</p>
-      <p class="date">21/03/2025</p>
-    </div>
-    <div class="itemblocM" type="show" adresse="https://www.errorishuman.com/#hyperselfiesEP">
-      <p class="titre">Hyperselfies</p>
-      <p class="lieu">Err is human</p>
-      <p class="ville">EP</p>
-      <p class="date">12/01/2023</p>
-    </div>
-    <div class="titleblocB">Artistes</div>
-    <div class="itemblocV" type="show" adresse="null">
-      <p class="nom">Tristan Deboise</p>
-      <p class="web" adresse="null">—</p>
-      <p class="bc" adresse="https://tristandeboise.bandcamp.com/">Bandcamp</p>
-      <p class="rs" adresse="https://www.instagram.com/tristan_deboise">instagram</p>
-    </div>
-    <div class="itemblocM" type="show" adresse="null">
-      <p class="nom">Pascal Montali</p>
-      <p class="web" adresse="null">—</p>
-      <p class="bc" adresse="https://szsoundz.bandcamp.com">Bandcamp</p>
-      <p class="rs" adresse="null">—</p>
-    </div>
-    <div class="itemblocVG" type="show" adresse="null">
-      <p class="nom">Guillaume Pascale</p>
-      <p class="web" adresse="https://www.errorishuman.com">website</p>
-      <p class="bc" adresse="https://errishuman.bandcamp.com/">Bandcamp</p>
-      <p class="rs" adresse="https://mastodon.social/@errishuman">mastodon</p>
-    </div>
-    <div class="itemblocM" type="show" adresse="null">
-      <p class="nom">Reeve Schumacher</p>
-      <p class="web" adresse="https://schumacherreeve.blogspot.com/">website</p>
-      <p class="bc" adresse="https://reeveschumacher.bandcamp.com">Bandcamp</p>
-      <p class="rs" adresse="https://www.instagram.com/reeve.schumacher/">instagram</p>
-    </div>
-  </div>
-  <div class="contenuL" id="lecteur">&nbsp;</div>
-</div>
-<div id="petitlecteur"></div>
+</section>
+<script type="text/javascript" src="ladigue.js"></script>
 </body>
 </html>

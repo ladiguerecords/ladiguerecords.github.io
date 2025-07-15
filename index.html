@@ -25,12 +25,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+<script src="https://masonry.desandro.com/masonry.pkgd.js"></script> 
 <script type="text/javascript" src="jquery.youtube-background.js"></script> 
 <script type="text/javascript" src="youtube-background-experimental.js"></script>
 </head>
 <body>
-<div id="entete"> <img style="margin-right: 20px" src="images/SVG/logotype.svg" width="40px" />
-  <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Bandcamp</a></p>
+<div id="entete"> <img class="top" style="margin-right: 20px" src="images/SVG/logotype.svg" width="40px" />
+  <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Shop</a></p>
   <p><a href="https://www.youtube.com/@LaDigueRecords/" target="_blank">YouTube</a></p>
   <p><a href="https://www.instagram.com/ladiguerecords/" target="_blank">Instagram</a></p>
   <p><a href="https://mastodon.social/@ladigue" target="_blank">Mastodon</a></p>
@@ -59,80 +60,151 @@
   </div>
   <div class="contenu" id="section2">
     <div class="contenuXL" id="events">
-      <div class="titleblocA" id="shows">Shows</div>
-      <div class="itemblocV"  type="show" adresse="https://www.latraversemarseille.fr/event/46?t=Faux_Semblants">
-        <p class="titre">Partitions Itératives X</p>
-        <p class="lieu">"La Traverse"</p>
-        <p class="ville">Marseille</p>
-        <p class="date">03/05/2025</p>
-      </div>
-      <div class="itemblocM" type="show" adresse="https://youtube.com/playlist?list=PLi6kb5Yxr3xrRVu30wpGV5rOpKwHUBwX6&si=fLest99zQZKqupdA">
-        <p class="titre">Soirée d'ecoute I</p>
-        <p class="lieu">"Le Ranch"</p>
-        <p class="ville">Tarascon</p>
-        <p class="date">23/03/2025</p>
-      </div>
-      <div class="itemblocVG" type="show" adresse="https://www.errorishuman.com/#piv">
-        <p class="titre">Partitions Itératives V</p>
-        <p class="lieu">"La Digue"</p>
-        <p class="ville">Port St Louis</p>
-        <p class="date">27/09/2024</p>
-      </div>
-      <div class="titleblocA">editions</div>
-      <div class="itemblocV"  type="show" adresse="https://www.errorishuman.com/#e2eost">
-        <p class="titre">Europa(to)Europa</p>
-        <p class="lieu">Err is human</p>
-        <p class="ville">LP</p>
-        <p class="date">21/03/2025</p>
-      </div>
-      <div class="itemblocM" type="show" adresse="https://www.errorishuman.com/#hyperselfiesEP">
-        <p class="titre">Hyperselfies</p>
-        <p class="lieu">Err is human</p>
-        <p class="ville">EP</p>
-        <p class="date">12/01/2023</p>
-      </div>
-      <div class="titleblocB">Artistes</div>
-      <div class="itemblocV" type="show" adresse="null">
-        <p class="nom">Tristan Deboise</p>
-        <p class="web" adresse="null">—</p>
-        <p class="bc" adresse="https://tristandeboise.bandcamp.com/">Bandcamp</p>
-        <p class="rs" adresse="https://www.instagram.com/tristan_deboise">instagram</p>
-      </div>
-      <div class="itemblocM" type="show" adresse="null">
-        <p class="nom">Pascal Montali</p>
-        <p class="web" adresse="null">—</p>
-        <p class="bc" adresse="https://szsoundz.bandcamp.com">Bandcamp</p>
-        <p class="rs" adresse="null">—</p>
-      </div>
-      <div class="itemblocVG" type="show" adresse="null">
-        <p class="nom">Guillaume Pascale</p>
-        <p class="web" adresse="https://www.errorishuman.com">website</p>
-        <p class="bc" adresse="https://errishuman.bandcamp.com/">Bandcamp</p>
-        <p class="rs" adresse="https://mastodon.social/@errishuman">mastodon</p>
-      </div>
-      <div class="itemblocM" type="show" adresse="null">
-        <p class="nom">Reeve Schumacher</p>
-        <p class="web" adresse="https://schumacherreeve.blogspot.com/">website</p>
-        <p class="bc" adresse="https://reeveschumacher.bandcamp.com">Bandcamp</p>
-        <p class="rs" adresse="https://www.instagram.com/reeve.schumacher/">instagram</p>
-      </div>
-      <div class="titleblocB">La Digue</div>
-      <div class="itemblocV" type="show" adresse="null">
+      <div class="titleblocB">→ La Digue</div>
+      <div class="itembloc" type="show" adresse="null" cible="section3">
         <p class="titre">Qui Sommes-nous ?</p>
         <p class="lieu"></p>
         <p class="ville"></p>
         <p class="date"></p>
       </div>
-      <div class="itemblocM" type="show" adresse="null">
+      <div class="itembloc" type="show" adresse="null" cible="section5">
+        <p class="titre">Moodboard</p>
+        <p class="lieu"></p>
+        <p class="ville"></p>
+        <p class="date"></p>
+      </div>
+      <div class="itembloc" type="show" adresse="null">
         <p class="titre">Newsletter</p>
         <p class="lieu"></p>
         <p class="ville"></p>
         <p class="date"></p>
       </div>
+      <div class="titleblocA" id="shows">→ Shows</div>
+      <div class="itembloc"  type="show" adresse="https://ladiguerecords.github.io/events/fullmoon.html">
+        <p class="titre">Astromusik II, Fullmoon</p>
+        <p class="lieu">"Ruines Pont Romain"</p>
+        <p class="ville">Trinquetaille</p>
+        <p class="date">11/07/2025</p>
+      </div>
+      <div class="itembloc"  type="show" adresse="https://www.youtube.com/watch?v=Mhqx4jzetiQ&list=PLi6kb5Yxr3xrfn5K3eylWYE7RtPoxMTC5">
+        <p class="titre">Partitions Itératives X</p>
+        <p class="lieu">"La Traverse"</p>
+        <p class="ville">Marseille</p>
+        <p class="date">03/05/2025</p>
+      </div>
+      <div class="itembloc" type="show" adresse="https://youtube.com/playlist?list=PLi6kb5Yxr3xrRVu30wpGV5rOpKwHUBwX6&si=fLest99zQZKqupdA">
+        <p class="titre">Soirée d'ecoute I</p>
+        <p class="lieu">"Le Ranch"</p>
+        <p class="ville">Tarascon</p>
+        <p class="date">23/03/2025</p>
+      </div>
+      <div class="itembloc" type="show" adresse="https://www.errorishuman.com/#piv">
+        <p class="titre">Partitions Itératives V</p>
+        <p class="lieu">"La Digue"</p>
+        <p class="ville">Port St Louis</p>
+        <p class="date">27/09/2024</p>
+      </div>
+      <div class="titleblocA">→ éditions</div>
+      <div class="itembloc"  type="show" adresse="https://errorishuman.bandcamp.com/album/europa-to-europa">
+        <p class="titre">Europa(to)Europa</p>
+        <p class="lieu">Err is human</p>
+        <p class="ville">LP</p>
+        <p class="date">21/03/2025</p>
+      </div>
+      <div class="itembloc" type="show" adresse="https://errorishuman.bandcamp.com/album/hyperselfies">
+        <p class="titre">Hyperselfies</p>
+        <p class="lieu">Err is human</p>
+        <p class="ville">EP</p>
+        <p class="date">12/01/2023</p>
+      </div>
+      <div class="titleblocB">→ Artistes</div>
+      <div class="itembloc" type="show" adresse="null" cible="tristan">
+        <p class="nom">Tristan Deboise</p>
+        <p class="web" adresse="null">—</p>
+        <p class="bc" adresse="https://tristandeboise.bandcamp.com/">Bandcamp</p>
+        <p class="rs" adresse="https://www.instagram.com/tristan_deboise">instagram</p>
+      </div>
+      <div class="itembloc" type="show" adresse="null" cible="pascal">
+        <p class="nom">Pascal Montali</p>
+        <p class="web" adresse="null">—</p>
+        <p class="bc" adresse="https://szsoundz.bandcamp.com">Bandcamp</p>
+        <p class="rs" adresse="null">—</p>
+      </div>
+      <div class="itembloc" type="show" adresse="null" cible="guillaume">
+        <p class="nom">Guillaume Pascale</p>
+        <p class="web" adresse="https://www.errorishuman.com">website</p>
+        <p class="bc" adresse="https://errorishuman.bandcamp.com">Bandcamp</p>
+        <p class="rs" adresse="https://mastodon.social/@errishuman">mastodon</p>
+      </div>
+      <div class="itembloc" type="show" adresse="null" cible="reeve">
+        <p class="nom">Reeve Schumacher</p>
+        <p class="web" adresse="https://schumacherreeve.blogspot.com/">website</p>
+        <p class="bc" adresse="https://reeveschumacher.bandcamp.com">Bandcamp</p>
+        <p class="rs" adresse="https://www.instagram.com/reeve.schumacher/">instagram</p>
+      </div>
     </div>
     <div class="contenuL" id="lecteur">&nbsp;</div>
   </div>
+  <div 
 </section>
+<section id="section3">
+  <div class="text">
+    <h1>Qui sommes-nous ?</h1>
+    <p>On raconte qu’il existait une plage camarguaise battue par les vents, aujourd’hui oubliée. Les vagues charriaient des fragments de sons venus d’ailleurs. Murmures perdus, chants brisés, fréquences errantes, signaux planétaires… Pour ne pas les laisser se dissiper, une digue fut érigée pour capter et recomposer ces ondes vagabondes et entrer en résonance avec elles.</p>
+    <p>Ceux qui l’approchèrent commencèrent à enregistrer, transformer et transmettre ces fréquences vagabondes. "La Digue" devint un poste d’écoute, un laboratoire d’échos, un territoire de dérives sonores.</p>
+    <p>Depuis 2025, le micro-label arlésien La Digue Records ravive cette improbable légende en produisant des œuvres à l’écoute des vibrations et des accidents, ouvrant le lointain à une expérience féconde de proximité.</p>
+    <p><img src="images/BACKS/ladigue.jpg"></p>
+	  <h1 class="top">&uarr;</h1>
+  </div>
+</section>
+<section id="section4">
+  <div id="tristan" class="bluemood">
+    <h1>Tristan Deboise</h1>
+    <p><img src="images/US/tristan.png">Tristan Deboise est un artiste pluridisciplinaire en perpétuelle recherche. Par les images photographiques ou dessinées, par l'écriture, par la musique, il compose un univers foisonnant à la quête d'une vision singulière de la réalité. Fasciné par les rites millénaires et dionysiaques, il fabrique ses propres masques, ses propres rituels, sa propre cosmogonie afin de découvrir si ce qui se trouve hors de sa vue existe vraiment. 
+      Par sa musique et ses textes, il tente de mettre en vibration les pierres et les souterrains, d'harmoniser les événements pour trouver la fréquence fondamentale.</p>
+    <p><a href="https://tristandeboise.bandcamp.com/" target="_blank">> shop</a><br>
+      <a href="https://www.instagram.com/tristan_deboise" target="_blank">> instagram</a> </p>
+	  	  <h1 class="top">&uarr;</h1>
+  </div>
+  <div id="pascal"  class="greymood">
+    <h1>Pascal Montali</h1>
+    <p><img src="images/US/pascale.png">Le projet musical SzSoundZ fusionne l'énergie du rock sonique avec des textures électroniques et eplore les possibilités du sampling, de la guitare et de la composition purement électronique. Cette alchimie donne naissance à des paysages sonores et des explorations intérieures. Grâce à son caractère improvisé, la musique se déploie en fonction des émotions du moment, touchant à la fois le corps et l'esprit, et voyageant à travers les genres et les époques pour mieux appréhender l'instant présent. Il s’est notamment produit avec Reeve Schumacher durant les Rencontres de la photographie d’Arles, ou à la collection Lambert d’Avignon.</p>
+    <p><a href="https://szsoundz.bandcamp.com" target="_blank">> shop</a></p>
+	  	  <h1 class="top">&uarr;</h1>
+  </div>
+  <div id="guillaume" class="greymood">
+    <h1>Guillaume Pascale</h1>
+    <p><img src="images/US/guillaume.png">Guillaume Pascale est un artiste-chercheur hanté par un imaginaire instable qui oscille entre environnements physiques et informationnels. Ses recherches récentes investissent l’imaginaire spatial contemporain et visent à éprouver la notion de planétarité. <br>
+      <br>
+      Derrière l’avatar Err is Human, il produit des fictions electroacoustiques situées, composées avec différents flux de données et un appareillage qu’il a développé et conçu, afin d’offrir une expérience sensible et collective de phénomènes ou d’événements distants voire invisibles.</p>
+    <p><a href="https://errorishuman.bandcamp.com/" target="_blank">> shop</a><br>
+      <a href="https://www.errorishuman.com" target="_blank">> website</a><br>
+      <a href="https://mastodon.social/@errishuman" target="_blank">> mastodon</a></p>
+	  	  <h1 class="top">&uarr;</h1>
+  </div>
+  <div id="reeve" class="yellowmood">
+    <h1>Reeve Schumacher</h1>
+    <p><img src="images/US/reeve.png">Reeve écoute vibrer le monde. Ses installations, souvent in situ, s’inscrivent, dans le prolongement de l’art optique et cinétique, avec en plus la dimension singulière, voire magique du chaman.<br>
+      <br>
+      Schumacher utilise des disques vinyles qu’il incise avec un cutter pour créer un son littéralement «fait main», que le diamant du tourne-disque traduit à la façon d’un doigt qui lit du braille. En live, il enchaîne ses disques préparés dans une ambiance sonore qui joue aussi bien de la douceur que du tumulte, et n’hésite pas à recourir au chant.</p>
+    <p><a href="https://reeveschumacher.bandcamp.com" target="_blank">> shop</a><br>
+      <a href="https://schumacherreeve.blogspot.com/" target="_blank">> website</a><br>
+      <a href="https://www.instagram.com/reeve.schumacher/" target="_blank">> instagram</a></p>
+	  	  <h1 class="top">&uarr;</h1>
+  </div>
+</section>
+<section id="section5">
+  <div class="blackmood">
+    <h1>MOODBOARD</h1>
+  </div>
+  <img class="pic" src="images/WALL/wall1.jpg">
+  <div class="bluemood"><img src="images/SVG/logo.svg"></div>
+  <img class="pic" src="images/WALL/wall16.jpg">
+  <div class="blackmood"><img src="images/SVG/logotype.svg"></div>
+ <a href="https://www.errorishuman.com/#e2eost" target="_blank"> <img class="pic" src="images/WALL/pack5.jpg"></a><img class="pic" src="images/WALL/wall20.jpg"><a href="https://www.youtube.com/watch?v=6En75XsII8g" target="_blank"><img class="pic" src="images/WALL/wall17.jpg"></a>
+  <div class="anim"><img src="images/SVG/moon.svg"></div>
+  <img class="pic" src="images/WALL/wall3.jpg"><img class="pic" src="images/WALL/wall5.jpg"><a href="https://youtube.com/playlist?list=PLi6kb5Yxr3xrRVu30wpGV5rOpKwHUBwX6&si=fLest99zQZKqupdA" target="_blank"><img class="pic" src="images/WALL/wall10.jpg"></a><a href="https://www.errorishuman.com/#octobox" target="_blank"><img class="pic" src="images/WALL/wall7.jpg"></a><img class="pic" src="images/WALL/wall9.jpg"><img class="pic" src="images/WALL/wall6.jpg"><a href="https://youtube.com/playlist?list=PLi6kb5Yxr3xrRVu30wpGV5rOpKwHUBwX6&si=fLest99zQZKqupdA" target="_blank"><img class="pic" src="images/WALL/wall11.jpg"></a><a href="https://www.youtube.com/watch?v=6En75XsII8g" target="_blank"><img class="pic" src="images/WALL/wall18.jpg"></a><img class="pic" src="images/WALL/wall13.jpg"><img class="pic" src="images/WALL/wall19.jpg"><img class="pic" src="images/WALL/wall12.jpg"><img class="pic" src="images/WALL/wall15.jpg"><h1 class="top">&uarr;</h1></section>		
+	<section id="section6"><p>© La Digue Records 2025</p></section>
 <script type="text/javascript" src="ladigue.js"></script>
 </body>
 </html>

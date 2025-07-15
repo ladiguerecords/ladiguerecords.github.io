@@ -1,7 +1,7 @@
 :root {
   --greyblack: #000;
-  --mentos: #daeddd;
-  --violine: #7d7dff;
+  --mentos: #bdc6e3;
+  --violine: #70c6e3;
   --black: #000;
   --cookie: #7f724f;
   --soblue: #c7faff;
@@ -40,7 +40,7 @@ section {
 }
 #entete p {
   font-family: "Literata";
-	font-size: 14px;
+  font-size: 14px;
   color: var(--blanco);
   margin: 0 0 0 15px;
   cursor: pointer;
@@ -60,9 +60,6 @@ section {
   top: 79px;
   width: 10%;
   height: inherit;
-  background-image: url("images/SVG/butte1.svg");
-  background-position: top;
-  background-repeat: no-repeat;
 }
 #back {
   opacity: 0;
@@ -91,7 +88,7 @@ section {
   padding: 0;
   width: 20%;
 }
-.titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG, .itemblocB {
+.titleblocA, .titleblocB, .itembloc {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
@@ -99,13 +96,16 @@ section {
   flex-wrap: wrap;
 }
 .titleblocA, .titleblocB {
-  padding: 5px 40px;
+  padding: 20px 40px;
+  margin: 10px 0;
+  border-top: white 1px dotted;
+  border-bottom: white 1px dotted;
 }
 .titleblocA p, .titleblocB p {
   margin: 0;
   padding: 0;
 }
-.itemblocV p, .itemblocM p, .itemblocVG p, .itemblocB p {
+.itembloc p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -113,9 +113,6 @@ section {
   margin: 0;
   height: 40px;
   line-height: 40px;
-}
-.itemblocB p {
-  color: var(--blanco);
 }
 .titre, .nom {
   width: 23%;
@@ -135,65 +132,43 @@ section {
   transition: text-decoration 500ms ease;
 }
 .nom:hover, .rs:hover, .bc:hover, .web:hover {
-  text-decoration: underline solid #000;
+  text-decoration: underline solid var(--blanco);
 }
-.itemblocV:hover > .titre, .itemblocM:hover > .titre, .itemblocVG:hover > .titre {
-  text-decoration: underline solid #000;
+.itembloc:hover > .titre, .itemblocM:hover > .titre {
+  text-decoration: underline solid var(--blanco);
 }
-.itemblocV:hover > .lieu, .itemblocM:hover > .lieu, .itemblocVG:hover > .lieu {
-  text-decoration: underline solid #000;
+.itembloc:hover > .lieu, .itemblocM:hover > .lieu {
+  text-decoration: underline solid var(--blanco);
 }
-.itemblocV:hover > .ville, .itemblocM:hover > .ville, .itemblocVG:hover > .ville {
-  text-decoration: underline solid #000;
+.itembloc:hover > .ville, .itemblocM:hover > .ville {
+  text-decoration: underline solid var(--blanco);
 }
-.itemblocV:hover > .date, .itemblocM:hover > .date, .itemblocVG:hover > .date {
-  text-decoration: underline solid #000;
+.itembloc:hover > .date, .itemblocM:hover > .date {
+  text-decoration: underline solid var(--blanco);
 }
-.itemblocV, .itemblocM, .itemblocVG, .itemblocB {
+.itembloc {
+  color: var(--blanco);
   text-transform: uppercase;
   min-height: 40px;
   align-items: center;
   cursor: pointer;
-  transition: background-position 0.5s ease-in-out;
 }
-.itemblocV:hover, .itemblocM:hover, .itemblocVG:hover {
-  background-position: 82% -1px;
-}
-.itemblocVG {
-  background: url("images/SVG/butte4.svg") no-repeat var(--violine);
+.itembloc {
   background-size: 5%;
   background-position: 85% -1px;
-  color: var(--black);
-}
-.itemblocV {
-  background: url("images/SVG/butte1.svg") no-repeat var(--violine);
-  background-size: 5%;
-  background-position: 85% -1px;
-  color: var(--black);
-}
-.itemblocM {
-  background: url("images/SVG/butte2.svg") no-repeat var(--mentos);
-  background-size: 5%;
-  background-position: 90% -1px;
-  color: var(--black);
-}
-.titleblocA {
-  background: url("images/SVG/butte2.svg") no-repeat;
-  background-size: 5%;
-  background-position: 90% -1px;
-}
-.titleblocB {
-  background: url("images/SVG/butte4.svg") no-repeat;
-  background-size: 5%;
-  background-position: 90% -1px;
+  color: var(--blanco);
 }
 .titleblocA, .titleblocB {
   font-family: "Literata";
   min-height: 40px;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 20px;
   color: var(--blanco);
   text-transform: capitalize;
+}
+#events {
+  padding-bottom: 20px;
+  border-bottom: 1px dotted var(--blanco);
 }
 #logo {
   aspect-ratio: 1 / 1;
@@ -291,7 +266,135 @@ td {
 .Lviolette {
   background-color: var(--violine);
 }
-/* Transition */
+/* qui sommes nous /////////////////////////////////////// */
+#section3 {
+  background-color: #fff;
+  color: var(--black);
+  padding: 40px;
+  min-height: 100vh;
+  border-bottom: 1px dotted #fff;
+}
+.text {
+  width: 50%;
+  margin: auto;
+  text-transform: uppercase;
+}
+.text img {
+  width: 100%;
+}
+/* artistes /////////////////////////////////////// */
+#section4 {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 120px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+#section4 div {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  width: calc(50% - 40px);
+  min-height: 512px;
+  margin: 0 20px 20px 0;
+  text-transform: uppercase;
+}
+#section4 h1, #section4 p {
+  margin: 0;
+  padding: 20px;
+}
+#section4 div img {
+  width: 20%;
+  float: left;
+  padding: 0 30px 30px 0;
+}
+/* moodboard /////////////////////////////////////// */
+#section5 {
+  padding: 120px 40px 120px 40px;
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
+  min-height: 100vh;
+  background-color: #fff;
+}
+#section5 .pic, #section5 div {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 0 20px 0;
+}
+#section5 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 512px;
+}
+#section5 .anim {
+  background-image: url("images/pattern2.jpg");
+  background-size: var(--backgroundSize);
+  animation: movingBackground2 5s linear infinite;
+}
+.blackmood {
+  color: #fff;
+  background-color: #000;
+}
+.whitemood {
+  color: #000;
+  background-color: #fff;
+}
+.bluemood {
+  color: #000;
+  background-color: var(--violine);
+}
+.greymood {
+  color: #fff;
+  background-color: #15121a;
+}
+.uvmood {
+  color: #fff;
+  background-color: #0f0037;
+}
+.yellowmood {
+  color: #000;
+  background-color: #ebc550;
+}
+#section5 div img {
+  width: 50%;
+}
+.top {
+  cursor: pointer;
+}
+#section6{
+	background-color: #000;
+	color: #fff;
+	height: 80px;
+	margin: 20px 40px;
+}
+@media screen and (max-width: 800px) {
+  #section5 {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media screen and (max-width: 600px) {
+  #section5 {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+/* Transition /////////////////////////////////////// */
 @keyframes movingBackground {
   from {
     background-position: center, 0 0;
@@ -325,7 +428,7 @@ td {
   }
 }
 /* GESTION DE SCROLL */
-/* RESIZE */
+/* resize /////////////////////////////////////// */
 @media screen and (min-width: 600px) {
   #petitmenu, #rubrik {
     display: none;
@@ -359,7 +462,7 @@ td {
   #shows {
     background-image: none;
   }
-  .titleblocA, .titleblocB, .itemblocV, .itemblocM, .itemblocVG {
+  .titleblocA, .titleblocB, .itembloc, .itemblocM, .itemblocG {
     background-position: 95% 0;
     background-size: 5%;
   }
@@ -389,10 +492,35 @@ td {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
   }
+  .text {
+    width: 100%;
+  }
+  #section4 div {
+    width: calc(100% - 40px);
+	    margin: 0 0 20px 0;
+  }
 }
-/* LES LIEN */
+/* LES LIENS */
 a {
   transition: 1s;
+}
+#section4 a {
+  color: inherit;
+}
+#section4 a:link {
+  color: inherit;
+  text-decoration: none;
+  /*  background-color: #000;*/
+}
+#section4 a:visited {
+  text-decoration: none;
+  /*  background-color: #000;*/
+}
+#section4 a:hover {
+  text-decoration: underline;
+}
+#section4 a:active {
+  text-decoration: none;
 }
 #rubrik a:link {
   color: var(--blanco);
@@ -408,7 +536,6 @@ a {
   color: var(--mentos);
   text-decoration: none;
 }
-/* selected link */
 #rubrik a:active {
   color: var(--blanco);
   text-decoration: none;

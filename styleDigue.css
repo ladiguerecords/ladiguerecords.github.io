@@ -176,7 +176,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
+  background-color: #DFE9FF;
 }
 #logo img {
   width: 45%;
@@ -268,11 +268,11 @@ td {
 }
 /* qui sommes nous /////////////////////////////////////// */
 #section3 {
-  background-color: #fff;
+  background-color: #DFE9FF;
   color: var(--black);
   padding: 40px;
   min-height: 100vh;
-  border-bottom: 1px dotted #fff;
+  border-bottom: 1px dotted #DFE9FF;
 }
 .text {
   width: 50%;
@@ -286,7 +286,7 @@ td {
 #section4 {
   min-height: 100vh;
   background-color: #000;
-  color: #fff;
+  color: #DFE9FF;
   padding: 120px 0 0 0;
   display: flex;
   flex-direction: row;
@@ -326,7 +326,7 @@ td {
   column-count: 3;
   column-gap: 20px;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #DFE9FF;
 }
 #section5 .pic, #section5 div {
   width: 100% !important;
@@ -345,23 +345,23 @@ td {
   animation: movingBackground2 5s linear infinite;
 }
 .blackmood {
-  color: #fff;
+  color: #DFE9FF;
   background-color: #000;
 }
 .whitemood {
   color: #000;
-  background-color: #fff;
+  background-color: #DFE9FF;
 }
 .bluemood {
   color: #000;
   background-color: var(--violine);
 }
 .greymood {
-  color: #fff;
+  color: #DFE9FF;
   background-color: #15121a;
 }
 .uvmood {
-  color: #fff;
+  color: #DFE9FF;
   background-color: #0f0037;
 }
 .yellowmood {
@@ -376,7 +376,7 @@ td {
 }
 #section6{
 	background-color: #000;
-	color: #fff;
+	color: #DFE9FF;
 	height: 80px;
 	margin: 20px 40px;
 }

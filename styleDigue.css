@@ -462,10 +462,6 @@ td {
   #shows {
     background-image: none;
   }
-  .titleblocA, .titleblocB, .itembloc, .itemblocM, .itemblocG {
-    background-position: 95% 0;
-    background-size: 5%;
-  }
   .date, .ville, .lieu, .rs, .bc, .web {
     width: 0;
   }

@@ -113,18 +113,7 @@ section {
   margin: 0;
   height: 40px;
   line-height: 40px;
-}
-.titre, .nom {
-  width: 23%;
-}
-.lieu, .web {
-  width: 15%;
-}
-.ville, .bc {
-  width: 10%;
-}
-.date, .rs {
-  width: 10%;
+  width: calc(25% - 40px);
 }
 .titre, .lieu, .ville, .date, .nom, .rs, .bc, .web {
   background-color: none;
@@ -149,14 +138,11 @@ section {
 .itembloc {
   color: var(--blanco);
   text-transform: uppercase;
-  min-height: 40px;
   align-items: center;
   cursor: pointer;
 }
-.itembloc {
-  background-size: 5%;
-  background-position: 85% -1px;
-  color: var(--blanco);
+.bonus {
+  display: none;
 }
 .titleblocA, .titleblocB {
   font-family: "Literata";
@@ -374,11 +360,11 @@ td {
 .top {
   cursor: pointer;
 }
-#section6{
-	background-color: #000;
-	color: #DFE9FF;
-	height: 80px;
-	margin: 20px 40px;
+#section6 {
+  background-color: #000;
+  color: #DFE9FF;
+  height: 80px;
+  margin: 20px 40px;
 }
 @media screen and (max-width: 800px) {
   #section5 {
@@ -438,6 +424,9 @@ td {
   }
 }
 @media screen and (max-width: 600px) {
+  .bonus {
+    display: block;
+  }
   #entete {
     display: none;
   }
@@ -462,11 +451,11 @@ td {
   #shows {
     background-image: none;
   }
-  .date, .ville, .lieu, .rs, .bc, .web {
-    width: 0;
+  .itembloc p {
+    width: calc(100% - 40px);
   }
-  .titre, .nom {
-    width: 60%;
+  .lieu, .ville, .date, .rs, .bc, .web {
+    display: none;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -493,7 +482,7 @@ td {
   }
   #section4 div {
     width: calc(100% - 40px);
-	    margin: 0 0 20px 0;
+    margin: 0 0 20px 0;
   }
 }
 /* LES LIENS */

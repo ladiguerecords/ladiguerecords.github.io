@@ -8,15 +8,12 @@
   --blanco: #fff;
   --backgroundSize: 295px;
 }
-@font-face {
-  font-family: medieval;
-  src: url('fonts/luxcontratenebrascond.ttf');
-}
 body {
   background-color: var(--greyblack);
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
 }
 html {
   scroll-behavior: smooth;
@@ -39,7 +36,6 @@ section {
   z-index: 1;
 }
 #entete p {
-  font-family: "Literata";
   font-size: 14px;
   color: var(--blanco);
   margin: 0 0 0 15px;
@@ -79,14 +75,22 @@ section {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 80%;
+  width: calc(100% - 200px);
+  display: flex;
+}
+.contenuXLB {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   display: flex;
 }
 .contenuL {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  width: 20%;
+  padding: 0 0 0 0;
+  min-width: 200px;
+  background-color: #000;
 }
 .titleblocA, .titleblocB, .itembloc {
   box-sizing: border-box;
@@ -98,8 +102,6 @@ section {
 .titleblocA, .titleblocB {
   padding: 20px 40px;
   margin: 10px 0;
-  border-top: white 1px dotted;
-  border-bottom: white 1px dotted;
 }
 .titleblocA p, .titleblocB p {
   margin: 0;
@@ -111,43 +113,40 @@ section {
   text-overflow: ellipsis;
   padding: 0 0 0 40px;
   margin: 0;
-  height: 40px;
+  height: 30px;
   line-height: 40px;
-  width: calc(25% - 40px);
 }
-.titre, .lieu, .ville, .date, .nom, .rs, .bc, .web {
+.titre, .nom {
   background-color: none;
   text-decoration: underline solid transparent;
-  transition: text-decoration 500ms ease;
+  transition: color 500ms ease;
+  width: calc(30% - 40px);
+}
+.lieu, .ville, .date, .rs, .bc, .web {
+  background-color: none;
+  text-decoration: underline solid transparent;
+  transition: color 500ms ease;
+  width: calc(20% - 40px);
 }
 .nom:hover, .rs:hover, .bc:hover, .web:hover {
-  text-decoration: underline solid var(--blanco);
+  /* color: var(--violine); */
 }
-.itembloc:hover > .titre, .itemblocM:hover > .titre {
-  text-decoration: underline solid var(--blanco);
-}
-.itembloc:hover > .lieu, .itemblocM:hover > .lieu {
-  text-decoration: underline solid var(--blanco);
-}
-.itembloc:hover > .ville, .itemblocM:hover > .ville {
-  text-decoration: underline solid var(--blanco);
-}
-.itembloc:hover > .date, .itemblocM:hover > .date {
-  text-decoration: underline solid var(--blanco);
+.nom {
+	cursor:default !important;
 }
 .itembloc {
   color: var(--blanco);
   text-transform: uppercase;
   align-items: center;
   cursor: pointer;
+  border-bottom: 1px solid #555;
 }
 .bonus {
   display: none;
 }
 .titleblocA, .titleblocB {
-  font-family: "Literata";
   min-height: 40px;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 20px;
   color: var(--blanco);
   text-transform: capitalize;
@@ -165,7 +164,7 @@ section {
   background-color: #DFE9FF;
 }
 #logo img {
-  width: 45%;
+  width: 80%;
 }
 #qui {
   background: var(--violine);
@@ -186,9 +185,6 @@ section {
 }
 #section2 {
   display: table !important;
-}
-.medieval {
-  font-family: "medieval";
 }
 #rubrik {
   box-sizing: border-box;
@@ -376,7 +372,7 @@ td {
 #formulaire h1 {
   margin: 0;
   padding: 0 0 20px 0;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 .my-form {
   margin: 0;
@@ -399,7 +395,7 @@ td {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
-	font-weight: 700;
+  font-weight: 700;
 }
 input {
   display: block;
@@ -428,12 +424,11 @@ input:focus {
   cursor: pointer;
   margin-top: 5px;
   transition: 0.3s;
-
 }
 .submit-btn:hover {
   background-color: #fff;
   color: #000;
-		  border: none;
+  border: none;
 }
 @media screen and (max-width: 800px) {
   #section5 {
@@ -489,21 +484,22 @@ input:focus {
     display: none;
   }
   #qui {
-    width: 80% !important;
+    width: calc(100% - 200px);
+     !important;
   }
 }
 @media screen and (max-width: 600px) {
   .bonus {
     display: block;
   }
+	.pc {
+		display: none;
+	}
   #entete {
     display: none;
   }
   #section1 {
     padding-top: 0;
-  }
-  #logo img {
-    width: 90%;
   }
   #logo, #qui {
     background-image: none;
@@ -530,11 +526,7 @@ input:focus {
     justify-content: flex-start;
   }
 }
-@media screen and (max-width: 1280px) {
-  #logo img {
-    width: 80%;
-  }
-}
+@media screen and (max-width: 1280px) {}
 @media screen and (max-width: 900px) {
   #events {
     width: 100% !important;
@@ -573,9 +565,6 @@ a {
   text-decoration: none;
   /*  background-color: #000;*/
 }
-#section4 a:hover {
-  text-decoration: underline;
-}
 #section4 a:active {
   text-decoration: none;
 }
@@ -609,12 +598,12 @@ a {
 }
 #entete a:hover {
   color: var(--blanco);
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* selected link */
 #entete a:active {
   color: var(--blanco);
-  text-decoration: underline;
+  text-decoration: none;
 }
 #section2 a:link {
   color: var(--greyblack);
@@ -627,7 +616,8 @@ a {
 }
 #section2 a:hover {
   color: var(--greyblack) !important;
-  text-decoration: underline !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
 }
 /* selected link */
 #section2 a:active {

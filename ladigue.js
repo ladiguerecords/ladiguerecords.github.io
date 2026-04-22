@@ -43,7 +43,7 @@ function viewvideo() {
 function checkscroll(e) {
   var scrollTop = $(window).scrollTop(); // position actuelle du scroll
   var windowHeight = $(window).height(); // hauteur de la fenêtre
-  var targetOffset = $('#section3').offset().top; // position de la div
+  var targetOffset = $('#section5').offset().top; // position de la div
 
   if (targetOffset <= scrollTop + $('#section1').height() + 80) {
     $('#section1').css({

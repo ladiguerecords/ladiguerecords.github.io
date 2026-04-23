@@ -16,12 +16,12 @@ body {
   font-weight: 100;
 }
 html {
-/*  scroll-behavior: smooth;
+  /*  scroll-behavior: smooth;
     scroll-snap-type: y mandatory;*/
   height: 100vh;
 }
 section {
- /*  scroll-snap-align: start;
+  /*  scroll-snap-align: start;
   scroll-snap-stop: always;*/
 }
 #entete {
@@ -107,26 +107,37 @@ section {
   margin: 0;
   padding: 0;
 }
+.itembloc{
+	padding: 0 0 0 40px;
+}
 .itembloc p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 0 0 40px;
-  margin: 0;
+  padding: 0 0 0 0;
+  margin: 0 20px 0 0;
   height: 30px;
   line-height: 40px;
 }
-.titre, .nom {
+.titre, .titre2, .nom {
   background-color: none;
-  text-decoration: underline solid transparent;
   transition: color 500ms ease;
-  width: calc(30% - 40px);
+  width: calc(40% - 40px);
 }
-.lieu, .ville, .date, .rs, .bc, .web {
+.ville, .web {
   background-color: none;
-  text-decoration: underline solid transparent;
   transition: color 500ms ease;
-  width: calc(20% - 40px);
+  width: 20%;
+}
+.lieu, .bc  {
+  background-color: none;
+  transition: color 500ms ease;
+  width: 25%;
+}
+.date, .rs {
+  background-color: none;
+  transition: color 500ms ease;
+  width: 8%;
 }
 .nom:hover, .rs:hover, .bc:hover, .web:hover {
   /* color: var(--violine); */
@@ -137,7 +148,6 @@ section {
 .itembloc {
   color: var(--blanco);
   text-transform: uppercase;
-  align-items: center;
   cursor: pointer;
   border-bottom: 1px solid #555;
 }
@@ -521,11 +531,18 @@ input:focus {
   .itembloc p {
     width: calc(100% - 40px);
   }
-  .lieu, .ville, .date, .rs, .bc, .web {
+  .lieu, .ville, .rs, .bc, .web {
     display: none;
   }
   .my-form {
     justify-content: flex-start;
+  }
+  .titre {
+    width: calc(60%-40px) !important;
+	  font-weight: 300 !important;
+  }
+  .date {
+    width: 30% !important;
   }
 }
 @media screen and (max-width: 1280px) {}
@@ -540,7 +557,7 @@ input:focus {
     display: none;
   }
   section {
-   /* scroll-snap-align: start;
+    /* scroll-snap-align: start;
     scroll-snap-stop: normal;*/
   }
   .text {

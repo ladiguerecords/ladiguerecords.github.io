@@ -16,13 +16,13 @@ body {
   font-weight: 100;
 }
 html {
-  scroll-behavior: smooth;
+/*  scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;*/
   height: 100vh;
-  scroll-snap-type: y mandatory;
 }
 section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+ /*  scroll-snap-align: start;
+  scroll-snap-stop: always;*/
 }
 #entete {
   position: fixed;
@@ -540,8 +540,8 @@ input:focus {
     display: none;
   }
   section {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
+   /* scroll-snap-align: start;
+    scroll-snap-stop: normal;*/
   }
   .text {
     width: 100%;

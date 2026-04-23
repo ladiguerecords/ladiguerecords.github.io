@@ -20,115 +20,36 @@ requestAnimationFrame(raf);
 // --- Variables ---
 let snapTimeout = null;
 let isSnapping = false;
+let introSnapping = false;
 
-// --- Détection intro ---
-function isOnIntro() {
-  var intro = document.getElementById('intro');
-  if (!intro) return false;
-  // On est sur l'intro si le haut de #main n'est pas encore atteint
-  var main = document.getElementById('main');
-  if (!main) return false;
-  return window.scrollY < main.offsetTop - 100;
-}
-
-// --- WHEEL : snap forcé sur l'intro ---
-// On intercepte AVANT Lenis en capturant en phase capture
-document.addEventListener('wheel', function (e) {
-  console.log('isOnIntro:', window.scrollY, document.getElementById('main').offsetTop);
-  if (!isOnIntro() || isSnapping) return;
-
-  e.preventDefault();
-  e.stopImmediatePropagation();
-  isSnapping = true;
-
-  // Stopper Lenis pour empêcher tout scroll parasite
-  lenis.stop();
-
-  var headerOffset = (window.innerWidth > 600) ? 80 : 0;
-
-  if (e.deltaY > 0) {
-    // Scroll vers le bas → aller à #main
-    lenis.start();
-    lenis.scrollTo(document.getElementById('main'), {
-      offset: -headerOffset,
-      duration: 1.2,
-      onComplete: function () {
-        setTimeout(function () {
-          isSnapping = false;
-        }, 300);
-      }
-    });
-  } else {
-    // Scroll vers le haut → retour en haut
-    lenis.start();
-    lenis.scrollTo(0, {
-      duration: 1.0,
-      onComplete: function () {
-        setTimeout(function () {
-          isSnapping = false;
-        }, 300);
-      }
-    });
-  }
-}, {
-  passive: false,
-  capture: true
-});
-
-// --- TOUCH : snap forcé sur l'intro (mobile) ---
-var touchStartY = 0;
-var touchHandled = false;
-
-document.addEventListener('touchstart', function (e) {
-  touchStartY = e.touches[0].clientY;
-  touchHandled = false;
-}, {
-  passive: true
-});
-
-document.addEventListener('touchmove', function (e) {
-  if (!isOnIntro() || isSnapping || touchHandled) return;
-
-  var delta = touchStartY - e.touches[0].clientY;
-  if (Math.abs(delta) < 30) return;
-
-  touchHandled = true;
-  isSnapping = true;
-  lenis.stop();
-
-  var headerOffset = (window.innerWidth > 600) ? 80 : 0;
-
-  if (delta > 0) {
-    lenis.start();
-    lenis.scrollTo(document.getElementById('main'), {
-      offset: -headerOffset,
-      duration: 1.2,
-      onComplete: function () {
-        setTimeout(function () {
-          isSnapping = false;
-        }, 300);
-      }
-    });
-  } else {
-    lenis.start();
-    lenis.scrollTo(0, {
-      duration: 1.0,
-      onComplete: function () {
-        setTimeout(function () {
-          isSnapping = false;
-        }, 300);
-      }
-    });
-  }
-}, {
-  passive: true
-});
-
-// --- Snap doux pour les autres sections ---
+// --- INTRO SNAP : zone interdite entre 0 et 100vh-80 ---
 lenis.on('scroll', function (e) {
+  var introTarget = window.innerHeight - 80;
+
+  // Snap intro : quand on est dans la zone et que la vélocité ralentit
+  if (e.scroll > 20 && e.scroll < introTarget - 20 && Math.abs(e.velocity) < 1 && !introSnapping) {
+    introSnapping = true;
+
+    if (e.direction > 0) {
+      lenis.scrollTo(introTarget, {
+        duration: 0.6
+      });
+    } else {
+      lenis.scrollTo(0, {
+        duration: 0.6
+      });
+    }
+
+    setTimeout(function () {
+      introSnapping = false;
+    }, 1500);
+    return;
+  }
+
+  // --- SNAP DOUX pour les autres sections ---
   clearTimeout(snapTimeout);
 
-  if (Math.abs(e.velocity) < 0.5 && !isSnapping) {
+  if (!isSnapping && !introSnapping && e.scroll >= introTarget - 20 && Math.abs(e.velocity) < 0.5) {
     snapTimeout = setTimeout(function () {
       snapToClosestSection(e.scroll);
     }, 150);
@@ -136,8 +57,6 @@ lenis.on('scroll', function (e) {
 });
 
 function snapToClosestSection(currentScroll) {
-  if (isOnIntro()) return;
-
   var sections = document.querySelectorAll('section');
   var headerOffset = (window.innerWidth > 600) ? 80 : 0;
   var closest = null;
@@ -219,15 +138,15 @@ function checkscroll() {
       position: 'static'
     });
   } else {
-    if (($(window).width() < 600)) {
+    if ($(window).width() > 600) {
       $('#section1').css({
         position: 'sticky',
-        top: '0'
+        top: 80
       });
     } else {
       $('#section1').css({
         position: 'sticky',
-        top: '80px'
+        top: 0
       });
     }
   }

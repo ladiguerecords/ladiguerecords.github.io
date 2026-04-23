@@ -25,7 +25,7 @@ let isSnapping = false;
 let introScrollLock = false;
 
 window.addEventListener('wheel', (e) => {
-  const intro = document.getElementById('intro');
+  const intro = document.getElementById('backgrounds');
   if (!intro) return;
 
   const introRect = intro.getBoundingClientRect();
@@ -71,7 +71,7 @@ window.addEventListener('touchstart', (e) => {
 }, { passive: true });
 
 window.addEventListener('touchend', (e) => {
-  const intro = document.getElementById('intro');
+  const intro = document.getElementById('backgrounds');
   if (!intro) return;
 
   const introRect = intro.getBoundingClientRect();
@@ -121,7 +121,7 @@ lenis.on('scroll', ({ scroll, velocity }) => {
 
 function snapToClosestSection(currentScroll) {
   // Ne pas snapper si on est sur l'intro
-  const intro = document.getElementById('intro');
+  const intro = document.getElementById('backgrounds');
   if (intro) {
     const introRect = intro.getBoundingClientRect();
     if (introRect.top < window.innerHeight * 0.5 && introRect.bottom > window.innerHeight * 0.5) {

@@ -132,7 +132,7 @@ section {
   /* color: var(--violine); */
 }
 .nom {
-	cursor:default !important;
+  cursor: default !important;
 }
 .itembloc {
   color: var(--blanco);
@@ -484,17 +484,16 @@ input:focus {
     display: none;
   }
   #qui {
-    width: calc(100% - 200px);
-     !important;
+    width: calc(100% - 200px) !important;
   }
 }
 @media screen and (max-width: 600px) {
   .bonus {
     display: block;
   }
-	.pc {
-		display: none;
-	}
+  .pc {
+    display: none;
+  }
   #entete {
     display: none;
   }
@@ -504,11 +503,14 @@ input:focus {
   #logo, #qui {
     background-image: none;
   }
-  #logo {
-    width: 40%;
+  .contenuL {
+    min-width: 150px;
+  }
+  .contenuXL {
+    width: calc(100%-150px);
   }
   #qui {
-    width: 60%;
+    width: calc(100% - 150px) !important;
   }
   .ticker-wrap {
     font-size: 20px;

@@ -22,11 +22,11 @@ let snapTimeout = null;
 let isSnapping = false;
 let introSnapping = false;
 
-// --- INTRO SNAP : zone interdite entre 0 et 100vh-80 ---
+// --- SCROLL LISTENER ---
 lenis.on('scroll', function (e) {
   var introTarget = window.innerHeight - 80;
 
-  // Snap intro : quand on est dans la zone et que la vélocité ralentit
+  // --- INTRO SNAP ---
   if (e.scroll > 20 && e.scroll < introTarget - 20 && Math.abs(e.velocity) < 1 && !introSnapping) {
     introSnapping = true;
 
@@ -44,6 +44,18 @@ lenis.on('scroll', function (e) {
       introSnapping = false;
     }, 1500);
     return;
+  }
+
+  // --- VIDEO BACKGROUND : pause/play ---
+  var vbg = window.VIDEO_BACKGROUNDS;
+  if (vbg) {
+    for (var k in vbg.index) {
+      if (e.scroll >= introTarget - 5) {
+        vbg.index[k].softPause();
+      } else {
+        if (!vbg.index[k].paused) vbg.index[k].softPlay();
+      }
+    }
   }
 
   // --- SNAP DOUX pour les autres sections ---

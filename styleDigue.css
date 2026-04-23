@@ -107,8 +107,8 @@ section {
   margin: 0;
   padding: 0;
 }
-.itembloc{
-	padding: 0 0 0 40px;
+.itembloc {
+  padding: 0 0 0 40px;
 }
 .itembloc p {
   white-space: nowrap;
@@ -129,7 +129,7 @@ section {
   transition: color 500ms ease;
   width: 20%;
 }
-.lieu, .bc  {
+.lieu, .bc {
   background-color: none;
   transition: color 500ms ease;
   width: 25%;
@@ -528,8 +528,15 @@ input:focus {
   #shows {
     background-image: none;
   }
+  .titleblocA, .titleblocB {
+    padding: 20px 20px;
+    margin: 10px 0;
+  }
+  .itembloc {
+    padding: 0 0 0 20px;
+  }
   .itembloc p {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
   }
   .lieu, .ville, .rs, .bc, .web {
     display: none;
@@ -539,10 +546,13 @@ input:focus {
   }
   .titre {
     width: calc(60%-40px) !important;
-	  font-weight: 300 !important;
+    font-weight: 300 !important;
   }
   .date {
     width: 30% !important;
+  }
+  #section5 {
+    padding: 40px 20px 120px 20px;
   }
 }
 @media screen and (max-width: 1280px) {}

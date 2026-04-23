@@ -61,7 +61,7 @@ section {
   opacity: 0;
 }
 #section1 {
-  padding-top: 0px;
+  padding-top: 0;
   position: sticky;
   top: 0;
 }
@@ -161,7 +161,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DFE9FF;
+  background-color: #fff;
 }
 #logo img {
   width: 80%;
@@ -250,7 +250,7 @@ td {
 }
 /* qui sommes nous /////////////////////////////////////// */
 #section3 {
-  background-color: #DFE9FF;
+  background-color: #fff;
   color: var(--black);
   padding: 40px;
   min-height: 100vh;
@@ -268,7 +268,7 @@ td {
 #section4 {
   min-height: 100vh;
   background-color: #000;
-  color: #DFE9FF;
+  color: #fff;
   padding: 120px 0 0 0;
   display: flex;
   flex-direction: row;
@@ -299,7 +299,7 @@ td {
 }
 /* moodboard /////////////////////////////////////// */
 #section5 {
-  padding: 120px 40px 120px 40px;
+  padding: 40px 40px 120px 40px;
   line-height: 0;
   -webkit-column-count: 3;
   -webkit-column-gap: 20px;
@@ -308,7 +308,7 @@ td {
   column-count: 3;
   column-gap: 20px;
   min-height: 100vh;
-  background-color: #DFE9FF;
+  background-color: #fff;
 }
 #section5 .pic, #section5 div {
   width: 100% !important;
@@ -327,7 +327,7 @@ td {
   animation: movingBackground2 5s linear infinite;
 }
 .blackmood {
-  color: #DFE9FF;
+  color: #fff;
   background-color: #000;
 }
 .whitemood {

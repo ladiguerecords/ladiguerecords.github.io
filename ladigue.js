@@ -77,6 +77,9 @@ lenis.on('scroll', function (e) {
       videoIsPlaying = true;
       playAllVideos();
     }
+  } else {
+    videoIsPlaying = false;
+    pauseAllVideos();
   }
   // --- SNAP DOUX pour les autres sections ---
   clearTimeout(snapTimeout);

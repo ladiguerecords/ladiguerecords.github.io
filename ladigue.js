@@ -21,7 +21,28 @@ requestAnimationFrame(raf);
 let snapTimeout = null;
 let isSnapping = false;
 let introSnapping = false;
-let videoIsPlaying = true; // état qu'on gère nous-mêmes
+let videoIsPlaying = true;
+
+// --- Contrôle vidéo direct ---
+function pauseAllVideos() {
+  var vbg = window.VIDEO_BACKGROUNDS;
+  if (!vbg) return;
+  for (var k in vbg.index) {
+    if (vbg.index[k].player && vbg.index[k].player.pauseVideo) {
+      vbg.index[k].player.pauseVideo();
+    }
+  }
+}
+
+function playAllVideos() {
+  var vbg = window.VIDEO_BACKGROUNDS;
+  if (!vbg) return;
+  for (var k in vbg.index) {
+    if (vbg.index[k].player && vbg.index[k].player.playVideo) {
+      vbg.index[k].player.playVideo();
+    }
+  }
+}
 
 // --- SCROLL LISTENER ---
 lenis.on('scroll', function(e) {
@@ -41,20 +62,13 @@ lenis.on('scroll', function(e) {
     return;
   }
 
-  // --- VIDEO BACKGROUND : pause quand on quitte l'intro, play quand on revient ---
-  var vbg = window.VIDEO_BACKGROUNDS;
-  if (vbg) {
-    if (e.scroll >= introTarget - 5 && videoIsPlaying) {
-      videoIsPlaying = false;
-      for (var k in vbg.index) {
-        vbg.index[k].softPause();
-      }
-    } else if (e.scroll < introTarget - 5 && !videoIsPlaying) {
-      videoIsPlaying = true;
-      for (var k in vbg.index) {
-        vbg.index[k].softPlay();
-      }
-    }
+  // --- VIDEO : pause quand on passe l'intro, play quand on revient ---
+  if (e.scroll >= introTarget - 5 && videoIsPlaying) {
+    videoIsPlaying = false;
+    pauseAllVideos();
+  } else if (e.scroll < introTarget - 5 && !videoIsPlaying) {
+    videoIsPlaying = true;
+    playAllVideos();
   }
 
   // --- SNAP DOUX pour les autres sections ---
@@ -109,7 +123,7 @@ $(document).ready(function() {
     'mobile': true
   });
 
-  // Désactiver l'IntersectionObserver du plugin vidéo pour gérer pause/play nous-mêmes
+  // Désactiver l'IntersectionObserver du plugin pour gérer pause/play nous-mêmes
   var waitForVBG = setInterval(function() {
     if (window.VIDEO_BACKGROUNDS && window.VIDEO_BACKGROUNDS.intersectionObserver) {
       window.VIDEO_BACKGROUNDS.intersectionObserver.disconnect();

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NOUS SOMMES LA DIGUE</title>
+<meta name="author" content="www.errorishuman.com">
+<meta name="publisher" content="La Digue Records">
+<meta name="copyright" content="La Digue Records">
+<meta name="Subject" content="musique">
+<meta name="Identifier-Url" content="https://ladiguerecords.github.io">
+<meta name="Robots" content="index">
+<meta name="Rating" content="general">
+<meta name="Distribution" content="global">
+<!-- Display compability for iOS Devices -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="La Digue">
+<meta name="pinterest" content="nopin" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="styleDigue.css" />
+<link href="video.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>	
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+<script type="text/javascript" src="jquery.youtube-background.js"></script> 
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ad127a8dc17eb3e5af4d36225/7ef1977bb69b55bd1f6a76a95.js");</script>
+</head>
+<body>
+<div id="entete"> <img class="top" style="margin-right: 20px" src="images/SVG/logotype.svg" width="40px" />
+  <p><a href="https://ladiguerecords.bandcamp.com/" target="_blank">Shop</a></p>
+  <p><a href="https://www.youtube.com/@LaDigueRecords/" target="_blank">YouTube</a></p>
+  <p><a href="https://www.instagram.com/ladiguerecords/" target="_blank">Instagram</a></p>
+  <p><a href="https://mastodon.social/@ladigue" target="_blank">Mastodon</a></p>
+  <p><a href="mailto:ladiguerecords@gmail.com">Mail</a></p>
+  <p><a href="#formulaire">Newsletter</a></p>
+</div>
+<a title="Logiciel billetterie en ligne" href="https://widget.weezevent.com/ticket/1283bf5a-622e-419c-a42d-fbd15617c489?id_evenement=2269429&locale=fr-FR&code=26468" class="weezevent-widget-integration" target="_blank" data-src="https://widget.weezevent.com/ticket/1283bf5a-622e-419c-a42d-fbd15617c489?id_evenement=2269429&locale=fr-FR&code=26468" data-width="650" data-height="600" data-resize="1" data-nopb="0" data-type="neo" data-width_auto="1" data-noscroll="0" data-id="2269429">Billetterie Weezevent</a> <script type="text/javascript" src="https://widget.weezevent.com/weez.js" async defer></script>
+</body>
+</html>
